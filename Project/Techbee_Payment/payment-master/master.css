@@ -1,0 +1,36 @@
+h1{
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+body{
+  background-color: #fff;
+  color: #3fc5f0;
+}
+.btn{
+    padding:20px;
+}
+
+.btnsmall{
+  padding:5px;
+  margin-left: 20px;
+}
+.button{
+  text-decoration:
+
+}
+.button:hover { color: #000;
+text-decoration: none; }
+.well2{
+  margin-right: 20px;
+}
+.payment{
+  margin-top: 50px;
+}
+.rounded-list{
+  border=0;
+  color: #000;
+}
+
+.banks{
+  margin: 10px;
+}

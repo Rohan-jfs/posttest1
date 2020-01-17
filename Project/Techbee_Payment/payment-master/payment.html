@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>WELCOME TO TECHBEE PAYMENT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="master.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <h1>WELCOME TO TECHBEE PAYMENT</h1>
+    <!-- left button group..consists of 4 modes of payments -->
+    <table class="payment" align="center">
+      <td >
+        <div class="well">
+          <div class="card">
+            <div class="card-header" id="groupone">
+              <h5 class="mb-0">
+
+              </h5>
+            </div>
+
+          <div class="btn-group-vertical" id="groupone">
+
+            <button class="btn btn-link collapsed btn-light" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <span class="button">UPI</span>
+            </button>
+
+            <button class="btn btn-link collapsed btn-light " data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <span class="button">CREDIT/DEBIT CARD</span>
+            </button>
+            <!-- <button class="btn btn-link collapsed btn-light" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> -->
+            <button class="btn btn-link collapsed  btn-light" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <span class="button">NET BANKING</span>
+            </button>
+
+            <button class="btn btn-link collapsed  btn-light" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <span class="button">CASH ON DELIVERY(COD)</span>
+            </button>
+          </div>
+      </td>
+      <!-- left side buttons end -->
+
+
+
+
+      <!-- payment mode implementation starts here -->
+      <td>
+        <div class="well well2">
+          <div id="accordion">
+            <div class="card">
+
+
+
+
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+
+                </h5>
+              </div>
+
+
+              <!-- upi payments -->
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+				<form>
+                  <table class="rounded-list">
+                    <tr>
+                      <td>
+                        <ol>
+                          <li>
+                            <p> <strong>Enter VPA</strong> You must have a Virtual Payment Address</p>
+                            <div class="form-group">
+                              <table>
+                                <td><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="username@bank"></td>
+                                <td><button type="button" class="btn btn-outline-primary btnsmall" onclick="window.location.href = 'https://w3docs.com';">VERIFY</button></td>
+                              </table>
+                            </div>
+                          </li>
+
+                          <li>
+                            <p>Receive payment request on bank appKeep your smart phone handy</p>
+                          </li>
+                          <li>
+                            <p>Authorize payment requestGo to transactions in bank app to approve</p>
+                          </li>
+
+                        </ol>
+                      </td>
+                    </tr>
+                  </table>
+				  </form>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="card">
+
+
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+
+                </h5>
+              </div>
+
+
+
+              <!-- credit/debit card implementation -->
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+
+                  <p>Credit/Debit Card Info</p>
+                  <form>
+                    <img src="images/Capture.PNG" class="credit" alt="">
+                    <div class="tab-for">
+                      <table>
+                        <tr>
+                          <td>
+                            <p>NAME ON CARD</p>
+                          </td>
+                          <td> <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="username"></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p>CARD NUMBER</p>
+                          </td>
+                          <td><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="card number"></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="transaction">
+                      <div class="tab-form-left user-form">
+                        <p>EXPIRATION</p>
+                        <table>
+                          <td><input type="number" class="form-control text_box" type="text" value="6" min="1" /></td>
+                          <td><input type="number" class="form-control text_box" type="text" value="1988" min="1" /></td>
+                        </table>
+                      </div>
+
+
+
+                      <br>
+                      <div class="">
+                        <table>
+                          <td>
+                            <p>CVV NUMBER</p>
+                          </td>
+                          <td> <input type="text" value="xxxx" class="form-control" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'xxxx';}" required=""></td>
+                          <td><button type="button" class="btn btn-outline-primary btnsmall" onclick="window.location.href = 'https://w3docs.com';">VERIFY</button></td>
+                        </table>
+                      </div>
+                  </form>
+
+                  <br><br>
+                  <div class="single-bottom">
+
+
+                    <input type="checkbox" id="brand" value="">
+                    <label for="brand"><span></span>By checking this box, I agree to the Terms & Conditions & Privacy Policy.</label>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- netbanking buttons -->
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              <table>
+
+                <div class="btn-group btn-group-lg">
+                  <div class="btn-group-vertical">
+                    <button type="button" class="btn banks btn-outline-primary" data-toggle="collapse" data-target="#collapsenet" aria-expanded="false" aria-controls="collapsenet">State Bank of India</button>
+                    <button type="button" class="btn banks btn-outline-secondary" data-toggle="collapse" data-target="#collapsenet" aria-expanded="false" aria-controls="collapsenet">HDFC bank</button>
+                    <button type="button" class="btn banks btn-outline-success" data-toggle="collapse" data-target="#collapsenet" aria-expanded="false" aria-controls="collapsenet">ICICI Bank</button>
+                  </div>
+                  <div class="btn-group-vertical">
+                    <button type="button" class="btn banks btn-outline-warning" data-toggle="collapse" data-target="#collapsenet" aria-expanded="false" aria-controls="collapsenet">Axis Bank</button>
+                    <button type="button" class="btn banks btn-outline-danger" data-toggle="collapse" data-target="#collapsenet" aria-expanded="false" aria-controls="collapsenet">Kodak Mahindra Bank</button>
+                    <button type="button" class="btn banks btn-outline-info" data-toggle="collapse" data-target="#collapsenet" aria-expanded="false" aria-controls="collapsenet">Citi Bank</button>
+                  </div>
+
+
+                </div>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- netbanking buttons ends -->
+
+
+
+
+        <div class="card">
+          <div class="card-header" id="headingNet">
+            <h5 class="mb-0">
+
+            </h5>
+          </div>
+
+          <!-- netbanking main block -->
+
+          <div id="collapsenet" class="collapse" aria-labelledby="headingNet" data-parent="#accordion">
+            <div class="card-body">
+
+              <table class="rounded-list" >
+                <tr>
+                  <td>
+
+                        <p> <strong>Enter Username</strong> You must have a Valid netbanking username</p>
+                        <div class="form-group">
+                          <table>
+                            <td><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="username@bank"></td>
+                            <td><button type="button" class="btn btn-outline-primary btnsmall">VERIFY</button></td>
+                          </table>
+                        </div>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+
+            </h5>
+          </div>
+
+
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+            <div class="card-body">
+              Payment will be done through cash on dilevery
+            </div>
+          </div>
+        </div>
+
+          <!-- right hand side product and customer details display -->
+
+      <td>
+        <div class="card">
+          <div class="card-header" id="alldetails">
+            <h5 class="mb-0">
+
+            </h5>
+          </div>
+
+        <div class="alert alert-light" role="alert" id="alldetails">
+          <table>
+
+
+
+            <tr>
+              <td>
+                <h4>Product Details</h4>
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <h5>Product Name</h5>
+              </td>
+              <td>Philips Trimmer</td>
+            </tr>
+            <tr>
+              <td>
+                <h6>Product ID</h6>
+              </td>
+              <td>1234123</td>
+            </tr>
+            <tr>
+              <td>
+                <h6>Quantity</h6>
+              </td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>
+                <h4>Customer Details</h4>
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <h5>Customer Name</h5>
+              </td>
+              <td>Anwesh Mishra</td>
+            </tr>
+            <tr>
+              <td>
+                <h6>Customer ID</h6>
+              </td>
+              <td>1341551</td>
+            </tr>
+
+
+
+
+
+            <tr>
+              <td>
+                <h4>Cart Details</h4>
+              </td>
+
+            </tr>
+            <tr>
+              <td>
+                <h5>Cart Value</h5>
+              </td>
+              <td>
+                <h6>Rs. 2000</h6>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h6>Gateway Charges</h6>
+              </td>
+              <td>Rs. 200</td>
+            </tr>
+            <tr>
+              <td>
+                <h5>Total</h5>
+              </td>
+              <td>Rs. 2200</td>
+
+            </tr>
+            <tr>
+              <td></td>
+              <td><button type="button" class="btn btn-outline-primary btnsmall" onclick="window.location.href = 'https://w3docs.com';">VERIFY</button></td>
+            </tr>
+
+
+
+
+
+            <tr>
+
+            </tr>
+
+          </table>
+
+        </div>
+
+
+      </td>
+  </div>
+
+  </div>
+  </td>
+  </table>
+  </div>
+
+
+
+
+
+
+</body>
+
+</html>
